@@ -63,6 +63,25 @@ p {
   padding: 0;
 }
 
+.button {
+  cursor: pointer;
+  background: #F24B88;
+  border: none;
+  border-radius: 5px;
+}
+.button_big {
+  border-radius: 10px;
+  padding: 20px 30px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.button_accent {
+  background: #ec3779;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 1024px;
@@ -71,6 +90,19 @@ p {
 @media (max-width: 1024px) {
   .container {
     max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .button_big {
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 375px) {
+  .button_big {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 1.5384615385;
   }
 }
 .header {
@@ -235,5 +267,197 @@ p {
 @media (max-width: 425px) {
   .header {
     top: 15px;
+  }
+}
+.main {
+  display: flex;
+  align-items: center;
+  padding-top: 250px;
+  padding-bottom: 100px;
+}
+.main__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__col {
+  flex: 0 0 37%;
+  display: flex;
+  flex-direction: column;
+}
+.main__col_big {
+  flex: 0 0 57%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.main__title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 0.8;
+  letter-spacing: 0.215em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.main__subtitle {
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 1;
+  letter-spacing: 0.215em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.main__text {
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.36);
+}
+.main__text_margin {
+  margin: 65px 0 90px 0;
+}
+.main__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.main__image {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  margin-right: 25px;
+}
+.main__image img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.cards-main-card {
+  background: #332f3c;
+  border-radius: 10px;
+  padding: 30px 25px 25px 25px;
+}
+.cards-main-card:not(:last-child) {
+  margin-bottom: 20px;
+}
+.cards-main-card__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.cards-main-card__text {
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.36);
+  margin: 15px 0;
+}
+.cards-main-card__button {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  text-decoration: none;
+  color: #ffffff;
+}
+.cards-main-card__button span {
+  width: 40px;
+  height: 40px;
+  background: #F24B88;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 13px;
+}
+.cards-main-card__button span svg {
+  fill: #ffffff;
+}
+@media (max-width: 1200px) {
+  .main__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__buttons {
+    justify-content: start;
+  }
+  .main__button:not(:last-child) {
+    margin-right: 40px;
+  }
+  .main__col {
+    flex: auto;
+    display: flex;
+    max-width: 75%;
+  }
+  .main__col:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .main__col_big {
+    align-items: center;
+  }
+}
+@media (max-width: 1024px) {
+  .main__col {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .main__col_big {
+    flex-direction: column;
+    width: 100%;
+  }
+  .main__image {
+    margin: 0;
+    max-width: 336px;
+    margin-bottom: 40px;
+    max-height: 283px;
+  }
+  .cards-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .cards-main-card {
+    width: 335px;
+  }
+  .cards-main-card:not(:last-child) {
+    margin: 0 20px 0 0;
+  }
+  .main {
+    padding-top: 150px;
+  }
+  .main__text_margin {
+    margin: 40px 0;
+  }
+}
+@media (max-width: 720px) {
+  .cards-main {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cards-main-card:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 470px) {
+  .main__button:last-child {
+    display: none;
+  }
+  .main__button:not(:last-child) {
+    margin: 0;
+  }
+}
+@media (max-width: 375px) {
+  .main__title {
+    font-size: 48px;
+  }
+  .main__subtitle {
+    font-size: 24px;
+  }
+  .cards-main-card {
+    width: 100%;
+  }
+  .main__buttons {
+    justify-content: center;
   }
 }
