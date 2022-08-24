@@ -28,6 +28,33 @@ p {
 	padding: 0;
 }
 
+.button {
+	cursor: pointer;
+
+	background: $pink;
+	border: none;
+	border-radius: 5px;
+	// .button_big
+
+	&_big {
+		border-radius: 10px;
+		padding: 20px 30px;
+
+		font-weight: 600;
+		font-size: 20px;
+		line-height: calc(30 / 20);
+
+		color: $white;
+		text-transform: uppercase;
+	}
+
+	// .button_accent
+
+	&_accent {
+		background: #ec3779;
+	}
+}
+
 @media (max-width: calc($container-width + 2 * $container-padding)) {
 	.container {
 		max-width: 1024px;
@@ -36,5 +63,22 @@ p {
 @media (max-width: 1024px) {
 	.container {
 		max-width: 768px;
+	}
+}
+@media (max-width: 768px) {
+	.button {
+		&_big {
+			padding: 10px 20px;
+		}
+	}
+}
+@media (max-width: 375px) {
+	.button {
+		&_big {
+			border-radius: 10px;
+			padding: 10px;
+			font-size: 13px;
+			line-height: calc(20 / 13);
+		}
 	}
 }
