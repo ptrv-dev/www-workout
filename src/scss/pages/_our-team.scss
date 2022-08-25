@@ -1,0 +1,148 @@
+.our-team {
+	// .our-team__container
+
+	&__container {
+	}
+
+	// .our-team__header
+
+	&__header {
+	}
+
+	// .our-team__content
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@media (max-width: 1024px) {
+			justify-content: space-around;
+		}
+	}
+
+	// .our-team__item
+
+	&__item {
+	}
+
+    // .our-team__button
+
+    &__button {
+        margin: 20px auto 0;
+        display: none;
+    }
+}
+
+.item-our-team {
+	flex: 0 0 261px;
+	background: $light;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+
+	// .item-our-team__image
+
+	&__image {
+	}
+
+	// .item-our-team__content
+
+	&__content {
+		padding: 20px 12px 12px 12px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .item-our-team__title
+
+	&__title {
+		font-style: italic;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: calc(27 / 18);
+		text-transform: uppercase;
+
+		color: $dark;
+	}
+
+	// .item-our-team__subtitle
+
+	&__subtitle {
+		font-style: italic;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: calc(20 / 13);
+
+		text-transform: capitalize;
+
+		color: #332f3c;
+	}
+
+	// .item-our-team__text
+
+	&__text {
+		font-size: 12px;
+		line-height: calc(18 / 12);
+		text-align: center;
+
+		color: rgba($dark, 0.5);
+		margin: 10px 0 50px 0;
+	}
+
+	// .item-our-team__button
+
+	&__button {
+		align-self: flex-end;
+	}
+}
+@media (max-width: 425px) {
+	.our-team__content {
+		justify-content: space-between;
+	}
+	.item-our-team {
+        margin: 0 5px;
+        flex-basis: 157px;
+		width: 157px;
+		background: none;
+		&__content {
+			padding: 0;
+		}
+		&__image {
+			width: 157px;
+			height: 157px;
+			border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+		}
+		&__title {
+			color: #e5e5e5;
+            text-align: center;
+		}
+		&__text {
+			display: none;
+		}
+		&__subtitle {
+			display: none;
+		}
+		&__button {
+			display: none;
+		}
+	}
+    .our-team__button {
+        display: block;
+    }
+}
+@media (max-width: 374px) {
+    .our-team__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item-our-team {
+        margin-bottom: 20px;
+    }
+    .our-team__button {
+        margin: 0 auto;
+    }
+}
