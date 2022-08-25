@@ -28,12 +28,55 @@ p {
 	padding: 0;
 }
 
+.section {
+	padding: 75px 0;
+	// .section__header
+
+	&__header {
+		margin-bottom: 50px;
+	}
+
+	// .section__title
+
+	&__title {
+		font-weight: 700;
+		font-size: 30px;
+		line-height: calc(45 / 30);
+		text-transform: uppercase;
+
+		color: $white;
+
+		position: relative;
+		&::after {
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			content: "";
+			width: 75px;
+			height: 5px;
+			background: $purple;
+		}
+	}
+}
+
 .button {
 	cursor: pointer;
+
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: $white;
 
 	background: $pink;
 	border: none;
 	border-radius: 5px;
+
+	padding: 7px 15px;
+
+	font-weight: 600;
+	line-height: calc(21 / 14);
+
 	// .button_big
 
 	&_big {
