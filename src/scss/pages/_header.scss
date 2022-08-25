@@ -108,9 +108,9 @@
 	overflow: hidden;
 }
 @media (max-width: 1023.96px) {
-    .header {
-        top: 30px;
-    }
+	.header {
+		top: 30px;
+	}
 	.nav {
 		position: fixed;
 		left: 0;
@@ -194,12 +194,12 @@
 	}
 }
 @media (max-width: 767.96px) {
-    .header__logo {
-        width: 110px;
-    }
+	.header__logo {
+		width: 110px;
+	}
 }
 @media (max-width: 425px) {
-    .header {
-        top: 15px;
-    }
+	.header {
+		top: 15px;
+	}
 }

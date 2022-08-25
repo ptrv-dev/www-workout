@@ -96,6 +96,12 @@ p {
 	&_accent {
 		background: #ec3779;
 	}
+
+	// .button_black
+
+	&_black {
+		background: #1F1C26;
+	}
 }
 
 @media (max-width: calc($container-width + 2 * $container-padding)) {
