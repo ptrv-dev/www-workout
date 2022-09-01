@@ -90,17 +90,27 @@ p {
 		color: $white;
 		text-transform: uppercase;
 	}
-
+	transition: box-shadow 0.3s, background 0.3s;
+	&:hover {
+		box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.75);
+		background: $pink-dark;
+	}
 	// .button_accent
 
 	&_accent {
 		background: #ec3779;
+		&:hover {
+			background: #e02369;
+		}
 	}
 
 	// .button_black
 
 	&_black {
-		background: #1F1C26;
+		background: #1f1c26;
+		&:hover {
+			background: #292531;
+		}
 	}
 }
 

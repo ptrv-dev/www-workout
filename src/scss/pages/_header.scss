@@ -92,11 +92,19 @@
 		padding: 0 7px;
 		border: 1px solid $light;
 
+		transition: background .3s ease-in, border-color .3s ease-in, color .2s ease-out;
+
+		&:hover {
+			background: $light;
+			border-color: $light;
+			color: $pink;
+		}
 		// .nav__button_accent
 
 		&_accent {
 			background: $pink;
 			border-color: $pink;
+			
 		}
 	}
 }

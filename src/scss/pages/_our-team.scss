@@ -40,9 +40,21 @@
 	flex-direction: column;
 	margin-bottom: 40px;
 
+	&:hover {
+		.item-our-team__image {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
 	// .item-our-team__image
 
 	&__image {
+		overflow: hidden;
+		img {
+			transition: transform 0.5s;
+		}
 	}
 
 	// .item-our-team__content

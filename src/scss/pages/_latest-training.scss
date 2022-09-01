@@ -43,13 +43,22 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	&:hover {
+		.latest-training-item__image {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
 	// .latest-training-item__image
 
 	&__image {
+		overflow: hidden;
 		width: 100%;
 		img {
 			display: block;
 			width: 100%;
+			transition: transform .5s;
 		}
 	}
 
