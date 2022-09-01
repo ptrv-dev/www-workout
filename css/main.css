@@ -99,6 +99,7 @@ p {
   padding: 7px 15px;
   font-weight: 600;
   line-height: 1.5;
+  transition: box-shadow 0.3s, background 0.3s;
 }
 .button_big {
   border-radius: 10px;
@@ -109,11 +110,21 @@ p {
   color: #ffffff;
   text-transform: uppercase;
 }
+.button:hover {
+  box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.75);
+  background: #d33770;
+}
 .button_accent {
   background: #ec3779;
 }
+.button_accent:hover {
+  background: #e02369;
+}
 .button_black {
-  background: #1F1C26;
+  background: #1f1c26;
+}
+.button_black:hover {
+  background: #292531;
 }
 
 @media (max-width: 1200px) {
@@ -201,6 +212,12 @@ p {
   text-decoration: none;
   padding: 0 7px;
   border: 1px solid #f2f2f2;
+  transition: background 0.3s ease-in, border-color 0.3s ease-in, color 0.2s ease-out;
+}
+.nav__button:hover {
+  background: #f2f2f2;
+  border-color: #f2f2f2;
+  color: #f24b88;
 }
 .nav__button_accent {
   background: #f24b88;
@@ -384,13 +401,16 @@ p {
   margin: 15px 0;
 }
 .cards-main-card__button {
-  display: flex;
+  display: inline-flex;
+  padding-right: 20px;
   align-items: center;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
   text-decoration: none;
+  border-radius: 20px;
   color: #ffffff;
+  transition: background 0.3s ease-out;
 }
 .cards-main-card__button span {
   width: 40px;
@@ -401,9 +421,20 @@ p {
   align-items: center;
   justify-content: center;
   margin-right: 13px;
+  transition: background 0.3s ease-in;
 }
 .cards-main-card__button span svg {
+  transition: fill 0.2s ease-in;
   fill: #ffffff;
+}
+.cards-main-card__button:hover {
+  background: #f24b88;
+}
+.cards-main-card__button:hover span {
+  background: #ffffff;
+}
+.cards-main-card__button:hover span svg {
+  fill: #f24b88;
 }
 @media (max-width: 1200px) {
   .main__container {
@@ -516,12 +547,17 @@ p {
   flex-direction: column;
   align-items: flex-start;
 }
+.latest-training-item:hover .latest-training-item__image img {
+  transform: scale(1.1);
+}
 .latest-training-item__image {
+  overflow: hidden;
   width: 100%;
 }
 .latest-training-item__image img {
   display: block;
   width: 100%;
+  transition: transform 0.5s;
 }
 .latest-training-item__title {
   margin: 12px 0 5px 0;
@@ -596,6 +632,15 @@ p {
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
+}
+.item-our-team:hover .item-our-team__image img {
+  transform: scale(1.1);
+}
+.item-our-team__image {
+  overflow: hidden;
+}
+.item-our-team__image img {
+  transition: transform 0.5s;
 }
 .item-our-team__content {
   padding: 20px 12px 12px 12px;
@@ -838,6 +883,9 @@ p {
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
+}
+.nav-footer__link:hover {
+  text-decoration: underline;
 }
 
 .subscribe-footer {
